@@ -1,8 +1,8 @@
-# mybatis-mp-generator-maven-plugin
+# xbatis-generator-maven-plugin
 
-## mybatis-mp maven代码生成插件
+## xbatis maven代码生成插件
 
-## mybatis-mp官网文档：<strong style="color:red">http://mybatis-mp.cn </strong> !!!
+## xbatis官网文档：<strong style="color:red">http://xbatis.cn </strong> !!!
 
 ### 1. 快速开始
 
@@ -10,9 +10,9 @@
 
 ```xml
 <plugin>
-    <groupId>cn.mybatis.mp</groupId>
-    <artifactId>mybatis-mp-generator-maven-plugin</artifactId>
-    <version>1.1.0</version>
+    <groupId>cn.xbatis</groupId>
+    <artifactId>xbatis-generator-maven-plugin</artifactId>
+    <version>1.1.1</version>
     <!-- 添加相应的数据库驱动 -->
     <dependencies>
         <dependency>
@@ -42,8 +42,8 @@
 ```xml
 
 <plugin>
-    <groupId>cn.mybatis.mp</groupId>
-    <artifactId>mybatis-mp-generator-maven-plugin</artifactId>
+    <groupId>cn.xbatis</groupId>
+    <artifactId>xbatis-generator-maven-plugin</artifactId>
     <version>最新版本</version>
     <!-- 添加相应数据库的驱动 -->
     <dependencies>
@@ -56,14 +56,14 @@
     <configuration>
         <!-- 指定xml配置文件的路径,可直接使用配置文件 -->
         <!-- 优先级， 配置文件的优先级大于 pom文件中的配置 -->
-        <configurationFile>src/main/resources/mpGeneratorConfig.xml</configurationFile>
+        <configurationFile>src/main/resources/xbatisGeneratorConfig.xml</configurationFile>
     </configuration>
 </plugin>
 ```
 
-##### 2.1.2. 外部文件（mpGeneratorConfig.xml）配置样例
+##### 2.1.2. 外部文件（xbatisGeneratorConfig.xml）配置样例
 
-` mpGeneratorConfig.xml 可由自己指定文件名，和上面的 configurationFile配置一样即可 `
+` xbatisGeneratorConfig.xml 可由自己指定文件名，和上面的 configurationFile配置一样即可 `
 
 ```xml
 
@@ -133,8 +133,8 @@
 #### 2.2. 全部在pom文件中配置
 ```xml
 <plugin>
-    <groupId>cn.mybatis.mp</groupId>
-    <artifactId>mybatis-mp-generator-maven-plugin</artifactId>
+    <groupId>cn.xbatis</groupId>
+    <artifactId>xbatis-generator-maven-plugin</artifactId>
     <version>最新版本</version>
     <!-- 添加相应数据库的驱动 -->
     <dependencies>
@@ -201,23 +201,23 @@
 </plugin>
 ```
 
-### 3. 运行maven命令 `mvn mybatis-mp-generator:generate` 即可
+### 3. 运行maven命令 `mvn xbatis-generator:generate` 即可
 
-### 4. 更多配置，参考代码生成器mybatis-mp-generator-core配置
+### 4. 更多配置，参考代码生成器xbatis-generator-core配置
 
-> https://mybatis-mp.cn/zh-CN/function/core/codeAutoCreate.html
+> https://xbatis.cn/zh-CN/function/core/codeAutoCreate.html
 
-### 5. 如需指定的mybatis-mp-generator-core版本，请在插件plugin中添加依赖
+### 5. 如需指定的xbatis-generator-core版本，请在插件plugin中添加依赖
 ```xml
 <plugin>
-    <groupId>cn.mybatis.mp</groupId>
-    <artifactId>mybatis-mp-generator-maven-plugin</artifactId>
+    <groupId>cn.xbatis</groupId>
+    <artifactId>xbatis-generator-maven-plugin</artifactId>
     <version>最新版本</version>
     <!-- 项目中需要添加驱动 -->
     <dependencies>
         <dependency>
-            <groupId>cn.mybatis-mp</groupId>
-            <artifactId>mybatis-mp-generator-core</artifactId>
+            <groupId>cn.xbatis</groupId>
+            <artifactId>xbatis-generator-core</artifactId>
             <version>指定版本</version>
         </dependency>
     </dependencies>
@@ -225,7 +225,7 @@
 ```
 
 ### 6. 注意事项
-* 默认configurationFile是模块pom.xml文件目录同级下的mpGeneratorConfig.xml文件
+* 默认configurationFile是模块pom.xml文件目录同级下的xbatisGeneratorConfig.xml文件
 * 插件中 baseFilePath 默认为maven项目模块根目录(project.basedir)
 * 其中skip和configurationFile参数，必须在pom中配置，其他参数可委托到配置文件
 * 默认javaPath 为 src/main/java (project.build.sourceDirectory)

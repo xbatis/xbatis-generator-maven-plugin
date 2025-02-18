@@ -1,9 +1,9 @@
-package cn.mybatis.mp.plugin.generator;
+package cn.xbatis.plugin.generator;
 
-import cn.mybatis.mp.generator.core.FastGenerator;
-import cn.mybatis.mp.generator.core.config.GeneratorConfig;
-import cn.mybatis.mp.plugin.generator.configuration.AbstractGeneratorConfigMojo;
-import cn.mybatis.mp.plugin.generator.configuration.DataSourceConfig;
+import cn.xbatis.generator.core.FastGenerator;
+import cn.xbatis.generator.core.config.GeneratorConfig;
+import cn.xbatis.plugin.generator.configuration.AbstractGeneratorConfigMojo;
+import cn.xbatis.plugin.generator.configuration.DataSourceConfig;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -18,35 +18,35 @@ import java.io.File;
 import java.util.function.Consumer;
 
 /**
- * MybatisMpGeneratorMojo
- * Mybatis Mp 代码生成插件
+ * XbatisGeneratorMojo
+ * Xbatis 代码生成插件
  *
  * @author: trifolium.wang
  * @date: 2024/9/14
  */
 @Mojo(name = "generate", defaultPhase = LifecyclePhase.GENERATE_SOURCES, requiresProject = false)
-public class MybatisMpGeneratorMojo extends AbstractGeneratorConfigMojo {
+public class XbatisGeneratorMojo extends AbstractGeneratorConfigMojo {
 
     @Parameter(defaultValue = "${project}", readonly = true)
     private MavenProject project;
 
-    @Parameter(property = "mybatis.mp.generator.skip", defaultValue = "false")
+    @Parameter(property = "xbatis.generator.skip", defaultValue = "false")
     private boolean skip;
 
     /**
-     * 配置文件(mpGeneratorConfig.xml)，和maven configuration中的配置一致，可以放到额外的文件，
+     * 配置文件(xbatisGeneratorConfig.xml)，和maven configuration中的配置一致，可以放到额外的文件，
      * 根目录为<mybatisMpGenerator></mybatisMpGenerator>
      * <p></p>
      * 如果同时配置，pom文件中的优先级大于配置文件
      */
-    @Parameter(property = "mybatis.mp.generator.configurationFile",
-            defaultValue = "${project.basedir}/mpGeneratorConfig.xml")
+    @Parameter(property = "xbatis.generator.configurationFile",
+            defaultValue = "${project.basedir}/xbatisGeneratorConfig.xml")
     protected File configurationFile;
 
     public void execute() throws MojoExecutionException {
         Log log = getLog();
         if (skip) {
-            log.info("mybatis-mp generator is skipped.");
+            log.info("xbatis generator is skipped.");
             return;
         }
 
@@ -77,9 +77,9 @@ public class MybatisMpGeneratorMojo extends AbstractGeneratorConfigMojo {
         }
 
         try {
-            log.info("mybatis-mp-generator start");
+            log.info("xbatis-generator start");
             new FastGenerator(generatorConfig).create();
-            log.info("mybatis-mp-generator success");
+            log.info("xbatis-generator success");
         } catch (Exception e) {
             log.error(e.getMessage(), e);
             throw new MojoExecutionException(e.getMessage(), e);

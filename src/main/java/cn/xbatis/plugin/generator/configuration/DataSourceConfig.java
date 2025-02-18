@@ -1,4 +1,4 @@
-package cn.mybatis.mp.plugin.generator.configuration;
+package cn.xbatis.plugin.generator.configuration;
 
 import org.apache.maven.plugins.annotations.Parameter;
 
@@ -12,19 +12,19 @@ public class DataSourceConfig {
     /**
      * 数据库连接字符串
      */
-    @Parameter(property = "mybatis.mp.generator.jdbcUrl")
+    @Parameter(property = "xbatis.generator.jdbcUrl")
     private String jdbcUrl;
 
     /**
      * 数据库用户名
      */
-    @Parameter(name = "mybatis.mp.generator.username")
+    @Parameter(name = "xbatis.generator.username")
     private String username;
 
     /**
      * 数据库密码
      */
-    @Parameter(name = "mybatis.mp.generator.password")
+    @Parameter(name = "xbatis.generator.password")
     private String password;
 
     public String getJdbcUrl() {

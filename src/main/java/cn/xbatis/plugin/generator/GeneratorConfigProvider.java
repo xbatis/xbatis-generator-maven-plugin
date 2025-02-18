@@ -1,9 +1,9 @@
-package cn.mybatis.mp.plugin.generator;
+package cn.xbatis.plugin.generator;
 
-import cn.mybatis.mp.generator.core.config.*;
-import cn.mybatis.mp.plugin.generator.configuration.AbstractGeneratorConfigMojo;
-import cn.mybatis.mp.plugin.generator.configuration.DataSourceConfig;
-import cn.mybatis.mp.plugin.generator.parser.ConfigurationFileParser;
+import cn.xbatis.generator.core.config.*;
+import cn.xbatis.plugin.generator.configuration.AbstractGeneratorConfigMojo;
+import cn.xbatis.plugin.generator.configuration.DataSourceConfig;
+import cn.xbatis.plugin.generator.parser.ConfigurationFileParser;
 import org.apache.maven.plugin.MojoExecutionException;
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package cn.mybatis.mp.plugin.generator.configuration;
+package cn.xbatis.plugin.generator.configuration;
 
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;

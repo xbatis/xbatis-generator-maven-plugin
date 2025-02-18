@@ -1,6 +1,6 @@
-package cn.mybatis.mp.plugin.generator.parser;
+package cn.xbatis.plugin.generator.parser;
 
-import cn.mybatis.mp.plugin.generator.configuration.XmlGeneratorConfig;
+import cn.xbatis.plugin.generator.configuration.XmlGeneratorConfig;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.reflection.PureJavaReflectionProvider;
 import com.thoughtworks.xstream.io.xml.XppDomDriver;
@@ -30,7 +30,7 @@ public class ConfigurationFileParser {
             xstream.addPermission(AnyTypePermission.ANY);
             xstream.ignoreUnknownElements();
             xstream.allowTypesByWildcard(new String[]{
-                    "cn.mybatis.mp.plugin.*"
+                    "cn.xbatis.plugin.*"
             });
             // 将 XML 转换为对象
             return (XmlGeneratorConfig) xstream.fromXML(configFile, new XmlGeneratorConfig());
