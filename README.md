@@ -32,9 +32,9 @@
 
 ```xml
 
-<mp-generator>
+<xbatis-generator>
     ...
-</mp-generator>
+</xbatis-generator>
 ```
 
 ##### 2.1.1. 配置maven插件
@@ -67,7 +67,7 @@
 
 ```xml
 
-<mp-generator>
+<xbatis-generator>
     <!-- 按照官方文档配置各对象 -->
     <author>trifolium</author>
     <fileCover>true</fileCover>
@@ -127,7 +127,7 @@
     <actionConfig>
         <enable>false</enable>
     </actionConfig>
-</mp-generator>
+</xbatis-generator>
 ```
 
 #### 2.2. 全部在pom文件中配置

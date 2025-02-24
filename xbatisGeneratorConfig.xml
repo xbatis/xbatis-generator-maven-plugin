@@ -1,4 +1,4 @@
-<mp-generator>
+<xbatis-generator>
     <!-- 按照官方文档配置各对象 -->
     <author>trifolium</author>
     <fileCover>true</fileCover>
@@ -57,4 +57,4 @@
     <actionConfig>
         <enable>false</enable>
     </actionConfig>
-</mp-generator>
+</xbatis-generator>

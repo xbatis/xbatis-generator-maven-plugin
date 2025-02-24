@@ -26,7 +26,7 @@ public class ConfigurationFileParser {
 
             XStream xstream = new XStream(new PureJavaReflectionProvider(), new XppDomDriver());
             // 设置别名
-            xstream.alias("mp-generator", XmlGeneratorConfig.class);
+            xstream.alias("xbatis-generator", XmlGeneratorConfig.class);
             xstream.addPermission(AnyTypePermission.ANY);
             xstream.ignoreUnknownElements();
             xstream.allowTypesByWildcard(new String[]{
