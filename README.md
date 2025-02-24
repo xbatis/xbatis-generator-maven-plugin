@@ -56,14 +56,14 @@
     <configuration>
         <!-- 指定xml配置文件的路径,可直接使用配置文件 -->
         <!-- 优先级， 配置文件的优先级大于 pom文件中的配置 -->
-        <configurationFile>src/main/resources/xbatisGeneratorConfig.xml</configurationFile>
+        <configurationFile>src/main/resources/xbatis-generator.xml</configurationFile>
     </configuration>
 </plugin>
 ```
 
-##### 2.1.2. 外部文件（xbatisGeneratorConfig.xml）配置样例
+##### 2.1.2. 外部文件（xbatis-generator.xml）配置样例
 
-` xbatisGeneratorConfig.xml 可由自己指定文件名，和上面的 configurationFile配置一样即可 `
+` xbatis-generator.xml 可由自己指定文件名，和上面的 configurationFile配置一样即可 `
 
 ```xml
 
@@ -89,8 +89,8 @@
         </includeTables>
     </tableConfig>
 
-    <!--    <javaPath>src/main/java</javaPath>-->
-    <!--    <resourcePath>src/main/resources</resourcePath>-->
+    <!--    <javaPath>src/main/java</javaPath>--><!-- 默认为src/main/java -->
+    <!--    <resourcePath>src/main/resources</resourcePath>--><!-- 默认为src/main/resources -->
 
     <basePackage>com.company.app.test</basePackage>
 
@@ -110,6 +110,7 @@
         <packageName>mappers</packageName>
         <resultMap>true</resultMap>
         <columnList>true</columnList>
+        <sufix>Mapper</sufix>
     </mapperXmlConfig>
 
     <daoConfig>
@@ -181,6 +182,7 @@
             <packageName>src/main/resources/mappers</packageName>
             <resultMap>true</resultMap>
             <columnList>true</columnList>
+            <suffix>Mapper</suffix>
         </mapperXmlConfig>
         <daoConfig>
             <enable>false</enable>
@@ -225,7 +227,7 @@
 ```
 
 ### 6. 注意事项
-* 默认configurationFile是模块pom.xml文件目录同级下的xbatisGeneratorConfig.xml文件
+* 默认configurationFile是模块pom.xml文件目录同级下的xbatis-generator.xml文件
 * 插件中 baseFilePath 默认为maven项目模块根目录(project.basedir)
 * 其中skip和configurationFile参数，必须在pom中配置，其他参数可委托到配置文件
 * 默认javaPath 为 src/main/java (project.build.sourceDirectory)

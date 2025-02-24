@@ -34,13 +34,13 @@ public class XbatisGeneratorMojo extends AbstractGeneratorConfigMojo {
     private boolean skip;
 
     /**
-     * 配置文件(xbatisGeneratorConfig.xml)，和maven configuration中的配置一致，可以放到额外的文件，
+     * 配置文件(xbatis-generator.xml)，和maven configuration中的配置一致，可以放到额外的文件，
      * 根目录为<mybatisMpGenerator></mybatisMpGenerator>
      * <p></p>
      * 如果同时配置，pom文件中的优先级大于配置文件
      */
     @Parameter(property = "xbatis.generator.configurationFile",
-            defaultValue = "${project.basedir}/xbatisGeneratorConfig.xml")
+            defaultValue = "${project.basedir}/xbatis-generator.xml")
     protected File configurationFile;
 
     public void execute() throws MojoExecutionException {
