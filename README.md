@@ -110,7 +110,7 @@
         <packageName>mappers</packageName>
         <resultMap>true</resultMap>
         <columnList>true</columnList>
-        <sufix>Mapper</sufix>
+        <suffix>Mapper</suffix>
     </mapperXmlConfig>
 
     <daoConfig>
