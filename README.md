@@ -12,7 +12,7 @@
 <plugin>
     <groupId>cn.xbatis</groupId>
     <artifactId>xbatis-generator-maven-plugin</artifactId>
-    <version>1.1.3-M2</version>
+    <version>1.1.2</version>
     <!-- 添加相应的数据库驱动 -->
     <dependencies>
         <dependency>
@@ -107,7 +107,7 @@
 
     <mapperXmlConfig>
         <enable>true</enable>
-        <packageName>mappers</packageName>
+        <packageName>mapper</packageName>
         <resultMap>true</resultMap>
         <columnList>true</columnList>
         <suffix>Mapper</suffix>
